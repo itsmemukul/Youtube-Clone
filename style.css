@@ -8,49 +8,49 @@
    #wrapper {
     width: 100%;
     height: 100vh;
-    position: relative; /* Add this to contain absolutely positioned children */
+    position: relative;
     }
 
 
-   /* sidebar */
+
    .sidebar {
     position: fixed;
     width: 240px;
-    height: calc(100vh - 80px); /* Subtract the height of the nav bar */
+    height: calc(100vh - 80px);
     background-color: #fff;
-    top: 80px; /* Position it below the nav bar */
+    top: 80px; 
     left: 0;
     overflow-y: auto;
     padding-top: 20px;
-    z-index: 999; /* Ensure it's below the nav bar but above other content */
+    z-index: 999; 
 }
 
 
-/* Main content area */
+
 .main-content {
-    margin-left: 240px; /* Width of the sidebar */
-    margin-top: 80px; /* Height of the nav bar */
+    margin-left: 240px; 
+    margin-top: 80px;
     padding: 24px;
 }
 
-/* Grid container */
+
 .video-grid {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
     gap: 16px;
 }
 
-/* Video item */
+
 .video-item {
     display: flex;
     flex-direction: column;
 }
 
-/* Thumbnail container */
+
 .thumbnail-container {
     position: relative;
     width: 100%;
-    padding-top: 56.25%; /* 16:9 Aspect Ratio */
+    padding-top: 56.25%; 
 }
 
 .thumbnail-container img {
@@ -63,7 +63,7 @@
     border-radius: 12px;
 }
 
-/* Video duration */
+
 .video-duration {
     position: absolute;
     bottom: 8px;
@@ -75,7 +75,7 @@
     font-size: 12px;
 }
 
-/* Video info */
+
 .video-info {
     display: flex;
     margin-top: 12px;
@@ -106,7 +106,7 @@
     color: #606060;
 }
 
-/* Responsive adjustments */
+
 @media (max-width: 768px) {
     .video-grid {
         grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
@@ -155,14 +155,14 @@
     justify-content: space-between;
     align-items: center;
     padding: 20px 20px;
-    position: fixed; /* Fix the nav bar at the top */
+    position: fixed; 
     top: 0;
     left: 0;
     right: 0;
     background: transparent;
-    background: rgba(255, 255, 255, 0.937); /* Semi-transparent white */
-    backdrop-filter: blur(10px); /* Blur the background behind */
-    z-index: 1000; /* Ensure it stays on top of other elements */
+    background: rgba(255, 255, 255, 0.937);
+    backdrop-filter: blur(10px);
+    z-index: 1000; 
 }
    
    .nav_left {
@@ -198,7 +198,7 @@
     display: flex;
     justify-content: center;
     position: relative;
-    width: 600px; /* Adjust as needed */
+    width: 600px;
     margin-right: 15px;
     
   }
@@ -206,8 +206,8 @@
   .input-container input {
     width: 100%;
     padding: 10px 15px;
-    padding-right: 40px; /* Make room for the icon on the right */
-    border-radius: 50px; /* Makes the input round */
+    padding-right: 40px;
+    border-radius: 50px;
     border: 1px solid #ccc;
     outline: none;
 
