@@ -1,0 +1,285 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: "Roboto", sans-serif;
+   }
+   
+   #wrapper {
+    width: 100%;
+    height: 100vh;
+    position: relative; /* Add this to contain absolutely positioned children */
+    }
+
+
+   /* sidebar */
+   .sidebar {
+    position: fixed;
+    width: 240px;
+    height: calc(100vh - 80px); /* Subtract the height of the nav bar */
+    background-color: #fff;
+    top: 80px; /* Position it below the nav bar */
+    left: 0;
+    overflow-y: auto;
+    padding-top: 20px;
+    z-index: 999; /* Ensure it's below the nav bar but above other content */
+}
+
+
+/* Main content area */
+.main-content {
+    margin-left: 240px; /* Width of the sidebar */
+    margin-top: 80px; /* Height of the nav bar */
+    padding: 24px;
+}
+
+/* Grid container */
+.video-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 16px;
+}
+
+/* Video item */
+.video-item {
+    display: flex;
+    flex-direction: column;
+}
+
+/* Thumbnail container */
+.thumbnail-container {
+    position: relative;
+    width: 100%;
+    padding-top: 56.25%; /* 16:9 Aspect Ratio */
+}
+
+.thumbnail-container img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 12px;
+}
+
+/* Video duration */
+.video-duration {
+    position: absolute;
+    bottom: 8px;
+    right: 8px;
+    background-color: rgba(0, 0, 0, 0.8);
+    color: white;
+    padding: 2px 4px;
+    border-radius: 2px;
+    font-size: 12px;
+}
+
+/* Video info */
+.video-info {
+    display: flex;
+    margin-top: 12px;
+}
+
+.channel-avatar {
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    margin-right: 12px;
+}
+
+.video-details {
+    flex-grow: 1;
+}
+
+.video-title {
+    font-weight: 500;
+    margin-bottom: 4px;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
+
+.channel-name, .video-meta {
+    font-size: 14px;
+    color: #606060;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .video-grid {
+        grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    }
+}
+
+@media (max-width: 480px) {
+    .video-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+.sidebar-item {
+    display: flex;
+    align-items: center;
+    padding: 10px 20px;
+    gap: 10px;
+    color: #030303;
+    text-decoration: none;
+}
+
+.sidebar-item:hover {
+    background-color: #f2f2f2;
+}
+
+.sidebar-item i {
+    margin-right: 20px;
+    font-size: 24px;
+}
+
+.sidebar-section {
+    border-top: 1px solid #e5e5e5;
+    padding-top: 10px;
+    margin-top: 10px;
+}
+
+.sidebar-section-title {
+    padding: 10px 20px;
+    font-size: 14px;
+    color: #606060;
+    text-transform: uppercase;
+}
+   
+.nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 20px;
+    position: fixed; /* Fix the nav bar at the top */
+    top: 0;
+    left: 0;
+    right: 0;
+    background: transparent;
+    background: rgba(255, 255, 255, 0.937); /* Semi-transparent white */
+    backdrop-filter: blur(10px); /* Blur the background behind */
+    z-index: 1000; /* Ensure it stays on top of other elements */
+}
+   
+   .nav_left {
+    display: flex;
+    align-items: center;
+    gap: 24px;
+    font-size: 22px;
+   }
+
+   .logo {
+    display: flex;
+    align-items: center;
+   }
+
+
+   
+   .logo img {
+    height: 22px;
+    width: auto;
+   }
+   
+   .nav_center {
+    display: flex;
+    align-items: center;
+    flex-grow: 1;
+    justify-content: center;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+   }
+   
+   .input-container {
+    display: flex;
+    justify-content: center;
+    position: relative;
+    width: 600px; /* Adjust as needed */
+    margin-right: 15px;
+    
+  }
+  
+  .input-container input {
+    width: 100%;
+    padding: 10px 15px;
+    padding-right: 40px; /* Make room for the icon on the right */
+    border-radius: 50px; /* Makes the input round */
+    border: 1px solid #ccc;
+    outline: none;
+
+  }
+
+  button {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 50px;
+    height: 100%;
+    cursor: pointer;
+    background-color: #F8F8F8;
+    font-size: 18px;
+    border: 1px solid #ccc;
+    border-radius: 0px 60px 60px 0px;
+  }
+
+   
+   .voiceicon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: #f0f0f0;
+   }
+
+   .voiceicon:hover{
+    background-color: #e2dfdf;
+   }
+   
+   .nav_right {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+   }
+   
+   .profile{
+    height: 22px;
+    width: auto;
+   }
+
+   .create, .noti, .profile {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 16px;
+   }
+
+   .ri-add-line, .ri-notification-3-line {
+    font-size: 20px;
+   }
+
+   .create{
+    display: flex;
+    justify-content: center;
+    padding-left: 15px;
+    padding-right: 15px;
+    gap: 10px;
+    height: 40px;
+    background-color: #f0f0f0;
+    border-radius: 50px;
+    
+   }
+
+   .create:hover{
+    background-color: #e2dfdf;
+   }
+
+img {
+    height: 40px;
+    width: auto;
+   }
